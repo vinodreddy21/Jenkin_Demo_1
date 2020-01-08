@@ -1,0 +1,17 @@
+<apex:page StandardController="Account" >
+    <apex:includeLightning /> 
+    <div id="Phocas" />
+    <script>
+    $Lightning.use("c:PhocusIntegrationOnAccountApp", function() {
+        $Lightning.createComponent("c:PhocusIntegrationOnAccount", {
+            "recordId" : "{!JSENCODE($CurrentPage.parameters.id)}"
+        },
+        "Phocas",
+            function(component) {
+             console.log("Lightning Web Component created Successfully!!");
+              // extend the functionality as per your requirement
+            }
+       );
+    });
+    </script>
+</apex:page>
