@@ -1,5 +1,6 @@
 <apex:page controller="DisplayAccounts">
     <apex:form >
+	<!-- Comment -->
         <apex:pageBlock >
             <apex:pageBlockTable value="{!accountList}" var="acc">
                 <apex:column value="{!acc.Name}"/>

@@ -1,0 +1,16 @@
+<apex:page showHeader="false" controller="CandidatePrint" >
+    <apex:panelGrid width="100%" style="text-align:right;">
+        <apex:form >
+            <apex:commandLink value="Print" onclick="window.print();"/>
+        </apex:form>
+    </apex:panelGrid>
+    <apex:pageBlock title="Candidate Information">
+        <apex:pageBlockTable value="{!candidates}" var="c">
+            <apex:column value="{!c.Name}"/>
+            <apex:column value="{!c.Age__c}"/>
+            <apex:column value="{!c.Phone_Number__c}"/>
+            <apex:column value="{!c.Candidate_Number__c}"/>
+            <apex:column value="{!c.Blood_Group__c}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>
